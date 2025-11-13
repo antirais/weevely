@@ -158,7 +158,7 @@ class Terminal(CmdModules):
         self.intro = template.Template(messages.terminal.welcome_to_s).render(
             path=self.session.get("path"),
             conn_info=session.get_connection_info(),
-            version=messages.version,
+            version=config.version,
             default_shell=self.session.get("default_shell"),
         )
 

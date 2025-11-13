@@ -1,5 +1,9 @@
+import importlib
+
 from pathlib import Path
 
+
+version = importlib.metadata.version("weevely")
 
 base_path = Path("~/.weevely/").expanduser()
 

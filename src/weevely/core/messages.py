@@ -1,6 +1,3 @@
-version = "4.0.2"
-
-
 class generic:
     file_s_not_found = "File '%s' not found"
     error_creating_file_s_s = "Error creating file '%s': %s"
