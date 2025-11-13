@@ -12,6 +12,7 @@ from weevely.core import modules
 from weevely.core.argparsers import CliParser
 from weevely.core.config import agent_templates_folder_path
 from weevely.core.config import obfuscators_templates_folder_path
+from weevely.core.config import version
 from weevely.core.loggers import dlog
 from weevely.core.loggers import log
 from weevely.core.sessions import SessionFile
@@ -62,6 +63,8 @@ def main(arguments):
 
 def cli():
     parser = CliParser(prog="weevely")
+    parser.add_argument("-v", "--version", action="version", version=f"weevely {version}")
+
     subparsers = parser.add_subparsers(dest="command")
 
     terminalparser = subparsers.add_parser("terminal", help="Run terminal or command on the target")
