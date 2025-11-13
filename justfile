@@ -44,4 +44,4 @@ build:
 # install built whl packages
 install-build: build
 	#!/bin/bash
-	uv tool install --force dist/*.whl
+	uv tool install --force $(ls -rt dist/*.whl | tail -n1)
